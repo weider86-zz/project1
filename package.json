@@ -1,0 +1,45 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "webpack typescript react eslint jest testing-library",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "webpack serve --config webpack.dev.config.ts",
+    "build": "webpack --config webpack.prod.config.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@babel/runtime": "^7.14.6",
+    "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^3.11.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "eslint": "^7.29.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-webpack-plugin": "^2.5.4",
+    "fork-ts-checker-webpack-plugin": "^6.2.12",
+    "html-webpack-plugin": "^5.3.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
