@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useQuery } from 'react-query';
 
-const StarWars = () => {
+const StarWars = (): JSX.Element => {
   const { isLoading, error, data } = useQuery('fetchLuke', () =>
     axios('http://swapi.dev/api/people/1/')
   );

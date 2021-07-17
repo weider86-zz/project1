@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { StarWars } from '../StarWars/StarWars';
 
 export const Container = styled.header`
   align-items: center;
@@ -11,10 +10,8 @@ export const Container = styled.header`
   width: 100%;
 `;
 
-const Wrapper = (): JSX.Element => (
-  <Container>
-    <StarWars />
-  </Container>
-);
+const Wrapper: FunctionComponent = ({ children }) => {
+  return <Container>{children}</Container>;
+};
 
 export { Wrapper };
