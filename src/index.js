@@ -1,26 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { ApolloServer, gql } = require('apollo-server');
 
-const users = [
-  {
-    _id: String(Math.random()),
-    name: 'Weider',
-    email: 'weider86@gmail.com',
-    active: true,
-  },
-  {
-    _id: String(Math.random()),
-    name: 'Rose',
-    email: 'rose85@gmail.com',
-    active: false,
-  },
-  {
-    _id: String(Math.random()),
-    name: 'Ben',
-    email: 'ben12@gmail.com',
-    active: true,
-  },
-];
+import { users } from './mocks';
 
 const typeDefs = gql`
   type User {

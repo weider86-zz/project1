@@ -8,7 +8,7 @@ const StarWars = (): JSX.Element => {
   );
   return (
     <div>
-      <h1>React Query example with star wars API</h1>
+      <h2>React Query example with star wars API</h2>
       {error && <div>Something went wrong ...</div>}
 
       {isLoading ? (

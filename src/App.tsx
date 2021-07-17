@@ -3,13 +3,14 @@ import { QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { queryClient } from './ClientProvider';
+import { About } from './components/About';
 import { Header } from './components/Header';
+import { Home } from './components/Home';
+import { StarWars } from './components/StarWars/StarWars';
+import { Users } from './components/Users';
 import { Wrapper } from './components/Wrapper';
 import { GlobalStyle } from './globalStyle';
-import { StarWars } from './components/StarWars/StarWars';
-
-const Home = () => <>Home page</>;
-const Users = () => <>Users page</>;
+import { UserProvider } from './providers/User';
 
 const App = (): JSX.Element => {
   return (
@@ -24,6 +25,9 @@ const App = (): JSX.Element => {
                 <Link to='/'>Home</Link>
               </li>
               <li>
+                <Link to='/about'>About</Link>
+              </li>
+              <li>
                 <Link to='/users'>Users</Link>
               </li>
               <li>
@@ -31,11 +35,14 @@ const App = (): JSX.Element => {
               </li>
             </ul>
           </nav>
-          <Wrapper>
-            <Route path='/' exact component={Home} />
-            <Route path='/users' exact component={Users} />
-            <Route path='/starwars' exact component={StarWars} />
-          </Wrapper>
+          <UserProvider>
+            <Wrapper>
+              <Route path='/' exact component={Home} />
+              <Route path='/about' exact component={About} />
+              <Route path='/users' exact component={Users} />
+              <Route path='/starwars' exact component={StarWars} />
+            </Wrapper>
+          </UserProvider>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </div>
